@@ -35,22 +35,19 @@ class TelegraphToken(StatesGroup):
 # endregion
 
 # region data variable
-API_TOKEN = '5092755664:AAHlNQH-b6xVyQSsCAXJNWMiebuunupH96w'
+API_TOKEN = '5142755664:AAHlNQH-e6xXyQSsCAXJNWMiebuunupH96w'    # token
 storage = MemoryStorage()
 bot = Bot(token=API_TOKEN, parse_mode=ParseMode.HTML)
 dp = Dispatcher(bot, storage=storage)
 dp.middleware.setup(LoggingMiddleware())
 markupMain = ReplyKeyboardMarkup(resize_keyboard=True, input_field_placeholder="прôмокôд 3127", row_width=2)
 buttons = [
-    KeyboardButton('🧊 Услўги'),     # 🗿 🥏 🧊👩‍🎓👩🏼‍💻👩🏼‍💼🙅🏼‍♀️🧏🏼‍♀️🤷🏻‍♂️🤷🏼‍♂️🙍🏼‍♀️🕸🦈🍃🪨🌚🌑🌘🌍🌏🔥🪐🌪💨🌬💫⭐️⚡️✨🌟💥☀️🌊🌫🫐🪁🗻🏔⛰🌠🌌🖲💎💠🌀🔆🔅❕❔🗯💭🀄️🇪🇺👀👩‍🎓👓🐋☘️🍀🍃🌱🌿🎋❄️💧
-    KeyboardButton('📘 Материáлы'),  # 🌌 🪁 🫐 🕸  🖲 💠 🇪🇺
+    KeyboardButton('🧊 Услўги'),    
+    KeyboardButton('📘 Материáлы'),  
     KeyboardButton('⭐ Мой блôг'),
     KeyboardButton('🦋 О наč')
 ]
 markupMain.add(*buttons)
-bot_name = 'FerreyChatBot'
-channel_name = 'https://t.me/ferey_channel'
-chat_name = 'https://t.me/ferey_channel'
 name_surname = 'Ferey'
 username = 'ferey_official'
 short_name = 'me'
@@ -62,7 +59,7 @@ def createConfig():
     touch(DEFAULT_INI)
     config_parser.read(DEFAULT_INI)
     config_parser['CONFIG'] = {}
-    writeConfigList('admin_id', ['418853095'])
+    writeConfigList('admin_id', ['718853045'])
 
     with open(DEFAULT_INI, 'w') as configfile:
         config_parser.write(configfile)
